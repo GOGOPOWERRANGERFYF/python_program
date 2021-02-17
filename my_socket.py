@@ -65,3 +65,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# WSGI (web server gateway interface)是一种规范
+# 它定义了使用python编写的web app与web server(socket服务端)之间的接口格式
+# 实现web app与web server间的解耦
+
+# 我们可以直接使用现成的实现WSGI的模块
+# 例如: wsgiref,uwsgi,werkzeug
