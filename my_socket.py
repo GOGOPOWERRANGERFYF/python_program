@@ -30,7 +30,7 @@ def main():
     # bind 捆绑
     # 实参传入一个元组tuple = ()
     # 127.0.0.1为本机地址,或使用localhost
-    my_socket.bind(('127.0.0.1', 9998))
+    my_socket.bind(('127.0.0.1', 9999))
     # 一个socket通过:客户端地址,客户端端口,服务器地址,服务器端口
     #                来唯一确定一个socket
 
@@ -58,6 +58,7 @@ def main():
         # 单引号和双引号在python中并无区别,都可以用来表示一个字符串
         #fyf_connect.send(b"This is fyf connection!")
         fyf_connect.send("<h1>This is fyf connection!</h1>".encode("utf-8"))
+        fyf_connect.send("<p><time>9:00</time></p>".encode("utf-8"))
 
         # 关闭和浏览器/客户端创建的连接
         fyf_connect.close()
