@@ -45,7 +45,7 @@ def main():
         # accept 接收
         # receive 收到
         fyf_connect, fyf_address = my_socket.accept()
-        # 对象.recv(1024)   接收1024个字符
+        # 对象.recv(1024)   接收的1024个字节
         print(fyf_connect.recv(1024))
         print("web app address:port", fyf_address)
 
