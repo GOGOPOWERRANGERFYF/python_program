@@ -47,10 +47,12 @@ def main():
         fyf_connect, fyf_address = my_socket.accept()
         # 对象.recv(1024)   接收1024个字符
         print(fyf_connect.recv(1024))
+        print("web app address:port", fyf_address)
 
         # 给浏览器/客户端返回数据
         # 根据http协议规定:
         # 返回给浏览器/客户端的报文头
+        # http状态码(status code): 200表示请求成功
         fyf_connect.send(b'HTTP/1.1 200 OK\r\n\
             Content-Type:text/html; charset=utf-8\r\n\r\n')
         # 返回给浏览器/客户端的内容
