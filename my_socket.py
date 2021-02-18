@@ -65,6 +65,9 @@ def main():
         # 关闭和浏览器/客户端创建的连接
         fyf_connect.close()
 
+# __name__为python内置属性,变量
+# 直接运行本py文件时,__name__为"__main__"
+# 被导入时,__name__为模块名
 if __name__ == "__main__":
     main()
 
