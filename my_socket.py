@@ -17,9 +17,6 @@
 #   链路层
 #   物理层
 
-# http  短链接
-# socket    长链接
-
 # 导入socket库
 import socket
 
