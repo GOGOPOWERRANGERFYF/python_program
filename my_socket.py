@@ -9,6 +9,14 @@
 # socket是我们进行网络编程最基本的API,由系统提供,不同的系统有区别
 # 其中windows平台的区别最大
 
+# tcp/ip五层模型
+#   应用层
+# (socket api)
+#   传输层
+#   网络层
+#   链路层
+#   物理层
+
 # 导入socket库
 import socket
 
