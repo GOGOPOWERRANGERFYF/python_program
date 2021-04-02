@@ -30,15 +30,11 @@ def main():
     # AF_INET   ipv4
     # AF_INET6  ipv6
     #
-    # UDP/IP
+    # UDP
     # (gram:克)
-    # user datagram control protocol/internet protocol
+    # user datagram control protocol
     # 用户数据报协议/网络协议
     # SOCK_DGRAM
-    # IP(网络协议):控制数据如何从源头到目的地,即"路由". 
-    # AF_INET   ipv4
-    # AF_INET6  ipv6
-    # 
     #
     # AF_INET address family(地址族) _ inet(使用ipv4进行通信)
     # AF_INET6 使用ipv6进行通信
