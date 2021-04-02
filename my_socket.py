@@ -39,7 +39,7 @@ def main():
     # AF_INET address family(地址族) _ inet(使用ipv4进行通信)
     # AF_INET6 使用ipv6进行通信
     # SOCK_STREAM 提供面向连接的稳定数据传输,即TCP协议
-    # socket类,my_socket为socket类socket函数的实例
+    # socket类,my_socket为socket类socket函数的实例(python中函数也是类,一切皆是类)
     # 建立一个socket类对象my_socket
     # socket类的socket方法(函数)
     my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    
