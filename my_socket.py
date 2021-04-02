@@ -22,6 +22,11 @@ import socket
 
 # 服务器端
 def main():
+    # TCP/IP 
+    # transmission control protocol/internet protocol
+    # 传输控制协议/网络协议
+    # 
+    # IP(网络协议):控制数据如何从源头到目的地,即"路由". 
     # AF_INET address family(地址族) _ inet(使用ipv4进行通信)
     # AF_INET6 使用ipv6进行通信
     # SOCK_STREAM 提供面向连接的稳定数据传输,即TCP协议
