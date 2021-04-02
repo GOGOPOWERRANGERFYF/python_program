@@ -25,8 +25,21 @@ def main():
     # TCP/IP 
     # transmission control protocol/internet protocol
     # 传输控制协议/网络协议
-    # 
+    # SOCK_STREAM
     # IP(网络协议):控制数据如何从源头到目的地,即"路由". 
+    # AF_INET   ipv4
+    # AF_INET6  ipv6
+    #
+    # UDP/IP
+    # (gram:克)
+    # user datagram control protocol/internet protocol
+    # 用户数据报协议/网络协议
+    # SOCK_DGRAM
+    # IP(网络协议):控制数据如何从源头到目的地,即"路由". 
+    # AF_INET   ipv4
+    # AF_INET6  ipv6
+    # 
+    #
     # AF_INET address family(地址族) _ inet(使用ipv4进行通信)
     # AF_INET6 使用ipv6进行通信
     # SOCK_STREAM 提供面向连接的稳定数据传输,即TCP协议
@@ -34,6 +47,7 @@ def main():
     # 建立一个socket类对象my_socket
     # socket类的socket方法(函数)
     my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    
+    # socket函数创建连接
     # tcp连接创建的是双向通信,双方都可以同时给对方发数据,谁先发谁后发,怎么协调,
     # 要根据具体协议来决定
     # http协议规定客户端先发请求给服务器,服务器收到后才发数据给客户端
