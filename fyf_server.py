@@ -1,13 +1,14 @@
 import socket
 
 # tcp/ip协议
+# 创建一个socket对象
 fyf_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 fyf_socket.bind(('127.0.0.1', 8800))
 fyf_socket.listen(100)
 
 while True:
     # http协议
-    # socket连接(对象), 客户端地址
+    # 返回一个socket连接(对象), 客户端地址
     http_connect, address = fyf_socket.accept()
     # 服务器接收到的请求报文 对象的recv(1024)方法读取请求报文
     print(http_connect.recv(1024), '\n', address, '\n')
