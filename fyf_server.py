@@ -13,6 +13,7 @@ fyf_socket.listen(100)
 while True:
     # 个人心得:
     #   本质就是socket连接,只不过是根据http协议来通信,仅为个人理解,不保证正确性
+    #   http协议要通过socket实现应用
     # http协议
     # 返回一个socket连接(对象), 客户端地址
     http_connect, address = fyf_socket.accept()
