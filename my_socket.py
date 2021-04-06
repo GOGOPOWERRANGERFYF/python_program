@@ -25,7 +25,7 @@ def main():
     # TCP/IP 
     # transmission control protocol/internet protocol
     # 传输控制协议/网络协议
-    # SOCK_STREAM
+    # SOCK_STREAM 流格式套接字
     # IP(网络协议):控制数据如何从源头到目的地,即"路由". 
     # AF_INET   ipv4
     # AF_INET6  ipv6
@@ -34,7 +34,7 @@ def main():
     # (gram:克)
     # user datagram control protocol
     # 用户数据报协议/网络协议
-    # SOCK_DGRAM
+    # SOCK_DGRAM 数据报格式套接字
     #
     # AF_INET address family(地址族) _ inet(使用ipv4进行通信)
     # AF_INET6 使用ipv6进行通信
