@@ -29,6 +29,11 @@ def WebApp(http_request, http_response):
     return ["<h1>Welcome to my web site!</h1>".encode('utf-8'), "<h1>go on</h1>".encode('utf-8')]
 
 # 实例化一个make_server对象
+# 实现功能: 封装socket,socket对象
 http_server = make_server('127.0.0.1', 8000, WebApp)
+
 print('server start... port:8000')
+
+#        socket连接对象
+# 实现功能: connect.accpet() 等待连接...
 http_server.serve_forever()
