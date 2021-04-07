@@ -39,5 +39,5 @@ http_server = make_server('127.0.0.1', 8000, WebApp)
 print('server start... port:8000')
 
 #        socket连接对象
-# 实现功能: connect.accpet() 等待连接...
+# 实现功能: connect.accpet() 监听连接...
 http_server.serve_forever()
