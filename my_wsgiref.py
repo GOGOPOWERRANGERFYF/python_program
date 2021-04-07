@@ -15,6 +15,8 @@
 # make_server函数
 from wsgiref.simple_server import make_server
 
+# 第一个形参接收http请求报文,一个字典
+# 第二个形参接收一个函数(封装响应报文的函数)
 def WebApp(http_request, http_response):
 #def WebApp(environ, start_response):
     http_response('200 OK', [('Content-Type', 'text/html')])
