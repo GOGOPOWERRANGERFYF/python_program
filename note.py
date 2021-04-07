@@ -79,7 +79,7 @@ func(a=1, b=2)
 #       响应体/响应正文
 # 状态行/r/n响应头/r/n/r/n响应正文
 # 协议版本 状态码 状态码的原因短语/r/n首部字段/r/n/r/n响应正文
-# HTTP/1.1 200 ok/r/nContent-Type:text/html/r/n/r/n<h1>标题<h1/>
+# HTTP/1.1 200 ok/r/nContent-Type:text/html/r/n/r/n<h1>标题</h1>
 
 # 流程: 创建虚拟环境-->创建工程-->创建应用
 
