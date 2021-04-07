@@ -15,10 +15,14 @@
 # make_server函数
 from wsgiref.simple_server import make_server
 
-# 第一个形参接收http请求报文,一个字典
+# 第一个形参接收http请求报文,请求报文(字节串)已经解析并且封装在一个字典里
+# 
 # 第二个形参接收一个函数(封装响应报文的函数)
 #def WebApp(environ, start_response):
 def WebApp(http_request, http_response):
+    print(http_request)
+    print(type(http_request))
+    print(http_request.get('PATH_INFO'))
 
     # 封装响应报文的：状态行,响应头
     http_response('200 OK', [('Content-Type', 'text/html')])
