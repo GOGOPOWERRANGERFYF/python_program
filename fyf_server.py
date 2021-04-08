@@ -10,6 +10,8 @@ fyf_socket.bind(('127.0.0.1', 8800))
 fyf_socket.listen(100)
 
 # 循环的测试条件一直为真,所以一直执行循环体
+# 根据已经创建的socket对象,这里创建的是TCP连接
+# socket对象的accept()方法返回的是TCP连接对象和客户端地址端口
 while True:
     # 个人心得:
     #   本质就是socket连接,只不过是根据http协议来通信,仅为个人理解,不保证正确性
@@ -27,4 +29,3 @@ while True:
     #http_connect.send(b"<h1>Hello, This is fyf website!</h1>")
     http_connect.send("<h1>Hello, This is fyf website!</h1>".encode('utf-8'))
     http_connect.close()
-
