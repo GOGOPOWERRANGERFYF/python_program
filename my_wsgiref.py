@@ -32,6 +32,8 @@ def WebApp(http_request, http_response):
 
     # 补充一个知识点(有待验证补充完善):
     # 如果浏览器缓存里面有favicon.ico的话就不会再发ico的请求报文
+    '''
+    # 处理请求URL的方案版本1.0
     if url_path != '/favicon.ico':
         #response_body = b'<h1>Welcome to my web site!</h1><h1>go on</h1>'
         with open('./html/login.html', 'rb') as file_object:
@@ -43,10 +45,40 @@ def WebApp(http_request, http_response):
     # 封装响应正文
     # 函数返回一个列表list
     return [response_body]
+    '''
+    # 处理请求URL的方案版本2.0
+    # url pattern: url格式,网址格式
+    # 用一个列表储存 网址格式 和 响应函数
+    url_pattern = [
+        ('/login', login),
+        ('/favicon.ico', favicon)
+    ]
+
+    response_func = None
+    for list_element in url_pattern:
+        if list_element[0] == url_path:
+            response_func = list_element[1]
+            break
+    
+    if response_func:
+        return [response_func(http_request)]
+    else:
+        return [b'404 Not Found']
+    
+def login(http_request): 
+    with open('./html/login.html', 'rb') as file_object:
+        file_data = file_object.read()
+    return file_data
+
+def favicon(http_request):
+    with open('./icons/favicon.ico', 'rb') as file_object:
+        file_data = file_object.read()
+    return file_data
+
 
 # 实例化一个make_server对象
 # 实现功能: 封装socket,socket对象
-http_server = make_server('127.0.0.1', 8000, WebApp)
+http_server = make_server('127.0.0.1', 8080, WebApp)
 
 print('server start... port:8000')
 
