@@ -81,6 +81,18 @@ func(a=1, b=2)
 # 协议版本 状态码 状态码的原因短语/r/n首部字段/r/n/r/n响应正文
 # HTTP/1.1 200 ok/r/nContent-Type:text/html/r/n/r/n<h1>标题</h1>
 
+# 从socket到wsgiref
+# socket核心:
+#   通过调用系统socket
+#   1. 创建socket
+#   2. 监听socket连接
+#   3. 创建socket连接
+# wsgiref核心:
+#   编写业务代码主要处理:
+#   1. 接收已解析请求报文
+#   2. 封装和发送响应报文
+
+
 # 流程: 创建虚拟环境-->创建工程-->创建应用
 
 # python虚拟环境
