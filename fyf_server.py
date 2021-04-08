@@ -23,6 +23,7 @@ TCP/IP协议栈是一系列网络协议的总和
     socket编程(用python实现)
     个人设置 IP协议版本 TCP/UDP:流格式报文(SOCK_STREAM)/用户数据报报文(SOCK_DGRAM)
     数据链路层以下的(包含数据链路层)不需要我们自己设置
+    其实就是在报文传输过程中各个设备进行封包解包(封包解包的程度看OSI五层模型)
 '''
 import socket
 # tcp/ip协议
