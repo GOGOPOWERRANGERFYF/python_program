@@ -30,13 +30,15 @@ def WebApp(http_request, http_response):
     http_response('200 OK', [('Content-Type', 'text/html')])
     #start_response('200 OK', [('Content-Type', 'text/html')])
 
-    # 补充一个知识点:
+    # 补充一个知识点(有待验证补充完善):
     # 如果浏览器缓存里面有favicon.ico的话就不会再发ico的请求报文
-    if url_path == '/favicon.ico':
-        with open('./icons/favicon.ico', 'rb') as file_object:
+    if url_path != '/favicon.ico':
+        #response_body = b'<h1>Welcome to my web site!</h1><h1>go on</h1>'
+        with open('./html/login.html', 'rb') as file_object:
             response_body = file_object.read()
     else:
-        response_body = b'<h1>Welcome to my web site!</h1><h1>go on</h1>'
+        with open('./icons/favicon.ico', 'rb') as file_object:
+            response_body = file_object.read()
 
     # 封装响应正文
     # 函数返回一个列表list
