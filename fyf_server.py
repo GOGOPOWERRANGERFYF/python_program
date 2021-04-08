@@ -43,7 +43,7 @@ fyf_socket.bind(('127.0.0.1', 8800))
 fyf_socket.listen(100)
 
 # 循环的测试条件一直为真,所以一直执行循环体
-# 根据已经创建的socket对象,这里创建的是TCP连接
+# *根据创建socket对象时传入的实参,可知创建的是TCP连接
 # socket对象的accept()方法返回的是TCP连接对象和客户端地址端口
 while True:
     # 个人心得:
