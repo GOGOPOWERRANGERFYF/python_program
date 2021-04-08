@@ -20,17 +20,25 @@ from wsgiref.simple_server import make_server
 # 第二个形参接收一个函数(封装响应报文的函数)
 #def WebApp(environ, start_response):
 def WebApp(http_request, http_response):
-    print(http_request)
-    print(type(http_request))
-    print(http_request.get('PATH_INFO'))
+    #浏览器发送了两次请求:1.URI标识的资源
+    #                   2.favicon.ico (浏览器标签的图标)
+    #print(http_request)
+    url_path = http_request.get('PATH_INFO')
+    print(type(http_request), url_path)
 
     # 封装响应报文的：状态行,响应头
     http_response('200 OK', [('Content-Type', 'text/html')])
     #start_response('200 OK', [('Content-Type', 'text/html')])
 
+    if url_path == '/favicon.ico':
+        with open('./icons/favicon.ico', 'rb') as file_object:
+            response_body = file_object.read()
+    else:
+        response_body = b'<h1>Welcome to my web site!</h1><h1>go on</h1>'
+
     # 封装响应正文
     # 函数返回一个列表list
-    return ["<h1>Welcome to my web site!</h1>".encode('utf-8'), "<h1>go on</h1>".encode('utf-8')]
+    return [response_body]
 
 # 实例化一个make_server对象
 # 实现功能: 封装socket,socket对象
