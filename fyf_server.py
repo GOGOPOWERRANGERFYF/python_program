@@ -1,28 +1,24 @@
 '''
 TCP/IP协议栈是一系列网络协议的总和
 
+应用层                                                 |HTTP数据|
+(HTTP FTP SMTP)         
 
-    应用层                                                |HTTP数据|
-    (HTTP FTP SMTP)         
+操作系统提供socket API
 
-    操作系统提供socket API
+传输层                                          |TCP首部|HTTP数据|
+(TCP UDP)
 
-    传输层                                         |TCP首部|HTTP数据|
-    (TCP UDP)
+网络层                                   |IP首部|TCP首部|HTTP数据|
+(IP ARP 路由器)
 
-    网络层                                  |IP首部|TCP首部|HTTP数据|
-    (IP ARP 路由器)
+数据链路层                     |以太网首部|IP首部|TCP首部|HTTP数据|
+(以太网 网桥)
 
-    数据链路层                     |以太网首部|IP首部|TCP首部|HTTP数据|
-    (以太网 网桥)
-
-    物理层
-    电信号传输(光纤 双绞线 无线电波)
-
+物理层
+电信号传输(光纤 双绞线 无线电波)
 '''
-
 import socket
-
 # tcp/ip协议
 # 创建一个socket(对象)
 # TCP/IP协议    transmission control protocol/internet protocol
