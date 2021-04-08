@@ -86,7 +86,7 @@ func(a=1, b=2)
 #   通过调用系统socket
 #   1. 创建socket
 #   2. 监听socket连接
-#   3. 创建socket连接
+#   3. 创建socket连接(服务端:被动接收连接)
 # wsgiref核心:
 #   编写业务代码主要处理:
 #   1. 接收已解析请求报文
