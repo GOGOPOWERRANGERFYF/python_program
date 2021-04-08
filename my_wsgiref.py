@@ -30,6 +30,8 @@ def WebApp(http_request, http_response):
     http_response('200 OK', [('Content-Type', 'text/html')])
     #start_response('200 OK', [('Content-Type', 'text/html')])
 
+    # 补充一个知识点:
+    # 如果浏览器缓存里面有favicon.ico的话就不会再发ico的请求报文
     if url_path == '/favicon.ico':
         with open('./icons/favicon.ico', 'rb') as file_object:
             response_body = file_object.read()
