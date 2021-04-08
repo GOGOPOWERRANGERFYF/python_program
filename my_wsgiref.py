@@ -76,7 +76,7 @@ def favicon(http_request):
     return file_data
 
 
-# 实例化一个make_server对象
+# 实例化一个make_server对象(创建一个web服务器)
 # 实现功能: 封装socket,socket对象
 http_server = make_server('127.0.0.1', 8080, WebApp)
 
