@@ -50,8 +50,9 @@ def WebApp(http_request, http_response):
     #实现解耦,url_pattern放在url.py
     #处理HTTP响应报文正文的业务逻辑函数login,favicon函数定义放在views.py
     #本模块改名为main.py
-    #html和图片放在templates文件夹
+    #html和图片放在template文件夹
     #一个web框架的雏形是不是就出来了...
+    #各模块之间from...import..
 
     # 处理请求URL的方案版本2.0
     # url pattern: url格式,网址格式
