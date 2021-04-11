@@ -66,6 +66,7 @@ while True:
     # 响应报文
     # b'byte string' 字节串
     #http_connect.send(b'HTTP/1.1 200 OK\r\n\Content-Type:text/html; charset=utf-8\r\n\r\n')
+    #字符串转换成utf-8编码
     http_connect.send('HTTP/1.1 200 OK\r\n\Content-Type:text/html; charset=utf-8\r\n\r\n'.encode('utf-8'))
     #http_connect.send(b"<h1>Hello, This is fyf website!</h1>")
     http_connect.send("<h1>Hello, This is fyf website!</h1>".encode('utf-8'))
