@@ -188,3 +188,6 @@ func(a=1, b=2)
 # 路由系统:
 # 1.静态路由
 # 2.动态路由
+
+# csrf cross-site request forgery 跨站请求伪造
+# 一种web攻击方式(详细的有需要再搜索了解)
