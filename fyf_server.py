@@ -3,15 +3,15 @@ TCP/IP协议栈是一系列网络协议的总和
 TCP/IP协议这个名称算是个历史遗留问题,早期这么用了也就一直沿用了...
 
 应用层                                                 |HTTP数据|
-(HTTP FTP SMTP)         
+(应用层协议：HTTP FTP SMTP)         
 
 操作系统提供socket API
 
 传输层                                          |TCP首部|HTTP数据|
-(TCP UDP)
+(传输层协议：TCP UDP)
 
 网络层                                   |IP首部|TCP首部|HTTP数据|
-(IP ARP 路由器)
+(网络层协议：IP ARP 路由器)
 
 数据链路层                     |以太网首部|IP首部|TCP首部|HTTP数据|
 (以太网 网桥)
