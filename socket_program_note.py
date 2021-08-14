@@ -54,12 +54,11 @@ func(a=1, b=2)
 #       请求头:请求首部字段
 #       内容实体/请求正文
 #   请求行/r/n请求头/r/n请求头/r/n/r/n请求正文(报文本质:字节串,当然,字节串和字符串之间可以转换)
+#   request line, header, request body
 #
 #   报文预览(文本):
 #       请求行
 #       请求头
-#       请求头
-#
 #       请求体/请求正文
 #
 #   注意:GET请求没有请求体,POST有
@@ -82,6 +81,7 @@ func(a=1, b=2)
 # 状态行/r/n响应头/r/n/r/n响应正文
 # 协议版本 状态码 状态码的原因短语/r/n首部字段/r/n/r/n响应正文
 # HTTP/1.1 200 ok/r/nContent-Type:text/html/r/n/r/n<h1>标题</h1>
+# status line, hearders, response body
 
 # 从socket到wsgiref
 # socket核心:
